@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.locale" value="ja_JP"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.ui.theme" value="simple" />
+
+    <package name="tutorial.hello" namespace="/" extends="struts-default">
+        <action name="helloStruts2" class="tutorial.hello.HelloAction" method="doHello">
+            <result name="success">/WEB-INF/jsp/helloStruts2.jsp</result>
+        </action>
+
+        <action name="customJsp" class="tutorial.hello.HelloAction2" method="doHello">
+            <result name="success">/WEB-INF/jsp/customJsp.jsp</result>
+        </action>
+
+        <action name="customJsp2" class="tutorial.hello.HelloAction2" method="doHello2">
+            <result name="success">/WEB-INF/jsp/customJsp2.jsp</result>
+        </action>
+
+
+
+    </package>
+
+
+</struts>
